@@ -13,6 +13,7 @@ public static class LevelBuildScenes
     {
         "Assets/Scenes/Level 1.unity", "Assets/Scenes/Level 2.unity",
         "Assets/Scenes/Level 3.unity", "Assets/Scenes/Level 4.unity",
+        "Assets/Scenes/Level 5.unity",
     };
 
     [MenuItem("FUR/Add Level Scenes To Build Settings")]

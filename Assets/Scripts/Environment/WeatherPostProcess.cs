@@ -1,31 +1,18 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [ExecuteAlways, DisallowMultipleComponent, RequireComponent(typeof(Camera))]
 public class WeatherPostProcess : MonoBehaviour
 {
     [SerializeField] private WeatherPreset preset;
     [SerializeField] private WeatherProfile[] profiles;
-    [SerializeField] private Shader colorGradeShader;
+    [SerializeField] private Volume volume;
     [SerializeField] private ParticleSystem rain;
     [SerializeField, Min(.1f)] private float rainPlaneDistance = 10f;
 
     private Camera renderCamera;
-    private Material material;
     private WeatherPreset appliedPreset = (WeatherPreset)(-1);
     private bool wasRaining;
-
-    private static readonly int Exposure = Shader.PropertyToID("_Exposure");
-    private static readonly int Contrast = Shader.PropertyToID("_Contrast");
-    private static readonly int Saturation = Shader.PropertyToID("_Saturation");
-    private static readonly int Filter = Shader.PropertyToID("_ColorFilter");
-    private static readonly int ShadowTint = Shader.PropertyToID("_ShadowTint");
-    private static readonly int HighlightTint = Shader.PropertyToID("_HighlightTint");
-    private static readonly int SplitToning = Shader.PropertyToID("_SplitToning");
-    private static readonly int HazeColor = Shader.PropertyToID("_HazeColor");
-    private static readonly int Haze = Shader.PropertyToID("_Haze");
-    private static readonly int Vignette = Shader.PropertyToID("_Vignette");
-    private static readonly int VignetteColor = Shader.PropertyToID("_VignetteColor");
-    private static readonly int Aspect = Shader.PropertyToID("_Aspect");
 
     public WeatherPreset ActivePreset => preset;
 
@@ -44,10 +31,23 @@ public class WeatherPostProcess : MonoBehaviour
     {
         if (index < 0 || index > (int)WeatherPreset.Rain) return;
         preset = (WeatherPreset)index;
+        ApplyWeather();
+    }
+
+    private void Update() => ApplyWeather();
+
+    private void ApplyWeather()
+    {
+        ApplyVolumeProfile();
         UpdateRain();
     }
 
-    private void Update() => UpdateRain();
+    private void ApplyVolumeProfile()
+    {
+        WeatherProfile profile = CurrentProfile;
+        if (volume == null || profile == null) return;
+        if (volume.sharedProfile != profile.volumeProfile) volume.sharedProfile = profile.volumeProfile;
+    }
 
     private void UpdateRain()
     {
@@ -83,40 +83,9 @@ public class WeatherPostProcess : MonoBehaviour
         appliedPreset = preset;
     }
 
-    private void OnRenderImage(RenderTexture source, RenderTexture destination)
-    {
-        WeatherProfile profile = CurrentProfile;
-        if (profile == null || colorGradeShader == null || !colorGradeShader.isSupported)
-        {
-            Graphics.Blit(source, destination);
-            return;
-        }
-        if (material == null)
-            material = new Material(colorGradeShader) { hideFlags = HideFlags.HideAndDontSave };
-        material.SetFloat(Exposure, profile.exposure);
-        material.SetFloat(Contrast, profile.contrast);
-        material.SetFloat(Saturation, profile.saturation);
-        material.SetColor(Filter, profile.colorFilter);
-        material.SetColor(ShadowTint, profile.shadowTint);
-        material.SetColor(HighlightTint, profile.highlightTint);
-        material.SetFloat(SplitToning, profile.splitToning);
-        material.SetColor(HazeColor, profile.hazeColor);
-        material.SetFloat(Haze, profile.haze);
-        material.SetFloat(Vignette, profile.vignette);
-        material.SetColor(VignetteColor, profile.vignetteColor);
-        material.SetFloat(Aspect, (float)source.width / source.height);
-        Graphics.Blit(source, destination, material);
-    }
-
     private void OnDisable()
     {
         if (rain != null) rain.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-        if (material != null)
-        {
-            if (Application.isPlaying) Destroy(material);
-            else DestroyImmediate(material);
-            material = null;
-        }
         wasRaining = false;
         appliedPreset = (WeatherPreset)(-1);
     }

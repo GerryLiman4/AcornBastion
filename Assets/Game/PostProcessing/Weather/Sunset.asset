@@ -12,17 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6256c4bfe47939645b606f62f6014c4c, type: 3}
   m_Name: Sunset
   m_EditorClassIdentifier: 
-  exposure: -0.12
-  contrast: 0.08
-  saturation: 0.95
-  colorFilter: {r: 1.15, g: 0.8, b: 0.66, a: 1}
-  shadowTint: {r: 0.65, g: 0.7, b: 1, a: 1}
-  highlightTint: {r: 1, g: 0.88, b: 0.65, a: 1}
-  splitToning: 0.18
-  hazeColor: {r: 0.95, g: 0.46, b: 0.25, a: 1}
-  haze: 0.06
-  vignette: 0.2
-  vignetteColor: {r: 0.025, g: 0.035, b: 0.06, a: 1}
+  volumeProfile: {fileID: 11400000, guid: 6165670e7f15d134d8330b15b471e589, type: 2}
   enableRain: 0
   rainRate: 320
   rainSpeed: 14

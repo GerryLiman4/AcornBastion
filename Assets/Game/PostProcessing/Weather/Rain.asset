@@ -12,17 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6256c4bfe47939645b606f62f6014c4c, type: 3}
   m_Name: Rain
   m_EditorClassIdentifier: 
-  exposure: -0.28
-  contrast: 0.06
-  saturation: 0.65
-  colorFilter: {r: 0.78, g: 0.88, b: 1.02, a: 1}
-  shadowTint: {r: 1, g: 1, b: 1, a: 1}
-  highlightTint: {r: 1, g: 1, b: 1, a: 1}
-  splitToning: 0
-  hazeColor: {r: 0.28, g: 0.36, b: 0.47, a: 1}
-  haze: 0.08
-  vignette: 0.18
-  vignetteColor: {r: 0.025, g: 0.035, b: 0.06, a: 1}
+  volumeProfile: {fileID: 11400000, guid: 3b22b3bb4b85675459cf96def31b717a, type: 2}
   enableRain: 1
   rainRate: 320
   rainSpeed: 14

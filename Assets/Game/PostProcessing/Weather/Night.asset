@@ -12,17 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6256c4bfe47939645b606f62f6014c4c, type: 3}
   m_Name: Night
   m_EditorClassIdentifier: 
-  exposure: -0.95
-  contrast: 0.12
-  saturation: 0.68
-  colorFilter: {r: 0.62, g: 0.78, b: 1.22, a: 1}
-  shadowTint: {r: 1, g: 1, b: 1, a: 1}
-  highlightTint: {r: 1, g: 1, b: 1, a: 1}
-  splitToning: 0
-  hazeColor: {r: 0.06, g: 0.1, b: 0.23, a: 1}
-  haze: 0.12
-  vignette: 0.28
-  vignetteColor: {r: 0.025, g: 0.035, b: 0.06, a: 1}
+  volumeProfile: {fileID: 11400000, guid: ee1962cb641f3cd4a8876856407f80cc, type: 2}
   enableRain: 0
   rainRate: 320
   rainSpeed: 14

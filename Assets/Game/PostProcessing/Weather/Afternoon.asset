@@ -12,17 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6256c4bfe47939645b606f62f6014c4c, type: 3}
   m_Name: Afternoon
   m_EditorClassIdentifier: 
-  exposure: 0.04
-  contrast: 0.08
-  saturation: 1.12
-  colorFilter: {r: 1, g: 1, b: 1, a: 1}
-  shadowTint: {r: 1, g: 1, b: 1, a: 1}
-  highlightTint: {r: 1, g: 1, b: 1, a: 1}
-  splitToning: 0
-  hazeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  haze: 0
-  vignette: 0.06
-  vignetteColor: {r: 0.025, g: 0.035, b: 0.06, a: 1}
+  volumeProfile: {fileID: 11400000, guid: 4eac33569b7aa2d4e8a3d4e04f1afd4a, type: 2}
   enableRain: 0
   rainRate: 320
   rainSpeed: 14
