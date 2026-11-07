@@ -60,6 +60,8 @@ public class MineController : MonoBehaviour
 
             MineralObject obj = Instantiate(mineralPrefab, tile.root.transform);
             tile.OccupyTile(obj.gameObject);
+            // OccupyTile snaps to the tile root; restore the prefab offset so minerals keep their depth (Z -0.25).
+            obj.transform.localPosition = mineralPrefab.transform.localPosition;
             obj.SetParentTile(tile);
             obj.Initialize(owner, spawned < manaCount);
             minerals.Add(obj);

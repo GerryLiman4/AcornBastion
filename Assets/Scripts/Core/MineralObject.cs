@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MineralObject : MonoBehaviour
 {
@@ -14,8 +15,11 @@ public class MineralObject : MonoBehaviour
     [SerializeField] public int maxValue = 45;
     [SerializeField] public int minTap = 1;
     [SerializeField] public int maxTap = 3;
+    [Tooltip("Filled image that shows how many taps are left.")]
+    [SerializeField] private Image tapBar;
 
     public int tapCount;
+    private int startingTapCount;
     public int value;
     public bool HasMana { get; private set; }
     public bool IsCollected { get; private set; }
@@ -41,6 +45,8 @@ public class MineralObject : MonoBehaviour
         HasMana = mana;
         IsCollected = false;
         tapCount = level != null ? level.Config.oreClicks : 2;
+        startingTapCount = Mathf.Max(tapCount, 1);
+        RefreshTapBar();
         value = level != null ? level.Config.oreGold : 20;
         ApplyRandomModel();
         if (mana)
@@ -48,6 +54,11 @@ public class MineralObject : MonoBehaviour
             model.color = new Color(0.3f, 0.85f, 1f);
             Instantiate(manaIndicatorPrefab, transform.position + Vector3.up * 0.65f, Quaternion.identity, transform);
         }
+    }
+
+    private void RefreshTapBar()
+    {
+        if (tapBar != null) tapBar.fillAmount = Mathf.Clamp01((float)tapCount / startingTapCount);
     }
 
     private void ApplyRandomModel()
@@ -78,6 +89,7 @@ public class MineralObject : MonoBehaviour
         if (IsCollected || owner == null || owner.currentState != GameStateId.Deploy) return false;
         if (AudioManager.Instance != null) AudioManager.Instance.PlayMineralClick();
         tapCount--;
+        RefreshTapBar();
         if (tapCount > 0) return true;
         IsCollected = true;
         SignalManager.MineralObjectDestroyed(this);
