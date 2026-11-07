@@ -16,6 +16,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] public DamageTrap damageTrapPrefab;
     [Header("HUD")]
     [SerializeField] public NotificationPanel notificationUI;
+    [Tooltip("End-of-level panel (CampaignOutcome prefab).")]
+    [SerializeField] private CampaignHUD campaignHUD;
     [SerializeField] public CardListUI cardListUI;
     [SerializeField] public GameObject deployUI;
     [SerializeField] public WaveSkillsUI waveSkillsUI;
@@ -87,7 +89,7 @@ public class LevelManager : MonoBehaviour
         cardListUI.Configure(this);
         Spells = gameObject.AddComponent<WaveSpellController>();
         Spells.Initialize(this);
-        gameObject.AddComponent<CampaignHUD>().Initialize(this);
+        if (campaignHUD != null) campaignHUD.Initialize(this);
         if (waveSkillsUI != null) waveSkillsUI.Initialize(this);
         if (gameOverUI != null) gameOverUI.SetActive(false);
         if (notificationUI != null) notificationUI.gameObject.SetActive(false);
