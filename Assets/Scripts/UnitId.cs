@@ -2,11 +2,14 @@
 public enum UnitId
 {
     None,
-    ArcherTower = 101,
-    WarriorTower,
-    MonkTower,
-    Pawn = 201,
-    Monk,
+    FarmerTower = 101,
+    ArcherTower = 102,
+    KnightTower,
+    MageTower,
+    GunnerTower,
+    ShadowGrunt = 201,
+    ShadowBrute,
+    ShadowElder,
 }
 
 

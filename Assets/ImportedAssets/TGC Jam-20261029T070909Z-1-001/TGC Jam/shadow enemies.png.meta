@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: de12a82c87713504a939f58826ea318f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4607250816209438043
+    second: shadow enemies_0
+  - first:
+      213: 20184191902696617
+    second: shadow enemies_1
+  - first:
+      213: 1710490236107387698
+    second: shadow enemies_2
+  - first:
+      213: 2173633464023391681
+    second: shadow enemies_3
+  - first:
+      213: 9031157669828053541
+    second: shadow enemies_4
+  - first:
+      213: -4107686135832910926
+    second: shadow enemies_5
+  - first:
+      213: -3554417710479634233
+    second: shadow enemies_6
+  - first:
+      213: 8796847706626106584
+    second: shadow enemies_7
+  - first:
+      213: 6065520948737678071
+    second: shadow enemies_8
+  - first:
+      213: -6771652632993445954
+    second: shadow enemies_9
+  - first:
+      213: 4568474085027388577
+    second: shadow enemies_10
+  - first:
+      213: 8853816450122185546
+    second: shadow enemies_11
+  - first:
+      213: 7119669726642763101
+    second: shadow enemies_12
+  - first:
+      213: -193606984772456439
+    second: shadow enemies_13
+  - first:
+      213: -6598054534221003454
+    second: shadow enemies_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: shadow enemies_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 443
+        width: 272
+        height: 208
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b55ca43053e30ff30800000000000000
+      internalID: 4607250816209438043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_1
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 443
+        width: 272
+        height: 208
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a440746a65b74000800000000000000
+      internalID: 20184191902696617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_2
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 443
+        width: 272
+        height: 208
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23374f2aec1ecb710800000000000000
+      internalID: 1710490236107387698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_3
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 443
+        width: 272
+        height: 208
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd140f7e1c4a2e10800000000000000
+      internalID: 2173633464023391681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_4
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 443
+        width: 272
+        height: 208
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a45a43d0e155d70800000000000000
+      internalID: 9031157669828053541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_5
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 240
+        width: 106
+        height: 158
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b3e1e019319ef6c0800000000000000
+      internalID: -4107686135832910926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_6
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 239
+        width: 105
+        height: 158
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c01187aceb2caec0800000000000000
+      internalID: -3554417710479634233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_7
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 240
+        width: 104
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d4a8a8a16ea41a70800000000000000
+      internalID: 8796847706626106584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_8
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 239
+        width: 102
+        height: 157
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa13379a2f0d2450800000000000000
+      internalID: 6065520948737678071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_9
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 236
+        width: 112
+        height: 157
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7461cdec14602a0800000000000000
+      internalID: -6771652632993445954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_10
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 36
+        width: 190
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac92abb9fa766f30800000000000000
+      internalID: 4568474085027388577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_11
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 40
+        width: 191
+        height: 87
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4bfa00e6231fda70800000000000000
+      internalID: 8853816450122185546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_12
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 38
+        width: 190
+        height: 87
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d55f4ae05e52ec260800000000000000
+      internalID: 7119669726642763101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_13
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 29
+        width: 190
+        height: 96
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9007a9e197b205df0800000000000000
+      internalID: -193606984772456439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow enemies_14
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 31
+        width: 190
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2450a1feb500f64a0800000000000000
+      internalID: -6598054534221003454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f0fdfe8cc9a3caf47970975c1b8cbbbc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      shadow enemies_0: 4607250816209438043
+      shadow enemies_1: 20184191902696617
+      shadow enemies_10: 4568474085027388577
+      shadow enemies_11: 8853816450122185546
+      shadow enemies_12: 7119669726642763101
+      shadow enemies_13: -193606984772456439
+      shadow enemies_14: -6598054534221003454
+      shadow enemies_2: 1710490236107387698
+      shadow enemies_3: 2173633464023391681
+      shadow enemies_4: 9031157669828053541
+      shadow enemies_5: -4107686135832910926
+      shadow enemies_6: -3554417710479634233
+      shadow enemies_7: 8796847706626106584
+      shadow enemies_8: 6065520948737678071
+      shadow enemies_9: -6771652632993445954
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

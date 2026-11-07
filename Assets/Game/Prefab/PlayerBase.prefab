@@ -48,6 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BaseController
   hpController: {fileID: 7701579074029705405}
   factionId: 1
+  healthySprite: {fileID: -1002043236811595382, guid: 871508e5f4c5a9546a58f20dcb72284a, type: 3}
+  damagedSprite: {fileID: 7730814618674699533, guid: 871508e5f4c5a9546a58f20dcb72284a, type: 3}
+  model: {fileID: 4728592253162587586}
 --- !u!1 &6117198772733197428
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +77,7 @@ Transform:
   m_GameObject: {fileID: 6117198772733197428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -82,7 +85,6 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4728592253162587586
 SpriteRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -101,8 +103,6 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -124,12 +124,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 15
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: b49ed640e16f36c44bbe0b281d5e3279, type: 3}
+  m_SortingLayerID: 198958557
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -1002043236811595382, guid: 871508e5f4c5a9546a58f20dcb72284a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,7 +136,8 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &7376707015395894680
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +188,7 @@ MonoBehaviour:
   maxHp: 20
   hitbox: {fileID: 1483868966447596546}
   healthBar: {fileID: 2309451394397563561}
-  factionId: 0
+  factionId: 1
 --- !u!61 &1483868966447596546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -270,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4413543062515018714, guid: fde2e7d7a25ff75428dab85094dcb47c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4413543062515018714, guid: fde2e7d7a25ff75428dab85094dcb47c, type: 3}
       propertyPath: m_SizeDelta.y

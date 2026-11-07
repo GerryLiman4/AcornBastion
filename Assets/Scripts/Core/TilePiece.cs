@@ -36,12 +36,33 @@ public class TilePiece : MonoBehaviour
 
     public void OccupyTile(GameObject occupator)
     {
+        if(occupator == null)
+        {
+            isOccupied = false;
+            indicator.enabled = true;
+            SetCanBeOccupied(true);
+           
+            return;
+        }
+
         occupator.transform.parent = root.transform;
         occupator.transform.position = root.transform.position;
 
         SetCanBeOccupied(false);
         isOccupied = true;
         indicator.enabled = false;
+    }
+
+    public GameObject RemoveOccupator()
+    {
+        GameObject occupator = null;
+        if (root.transform.childCount > 0) {
+            occupator = root.transform.GetChild(0).gameObject;
+        }
+
+        OccupyTile(null);
+
+        return occupator;
     }
 
     private void OnMouseEnter()

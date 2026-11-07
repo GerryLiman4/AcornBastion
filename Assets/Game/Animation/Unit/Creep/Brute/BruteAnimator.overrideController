@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BruteAnimator
+  m_Controller: {fileID: 9100000, guid: c1a584b60c45cfa4c8e47d15b9607922, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: b2e8dc6eff19f5e46847c85b3ca3b59b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fd5887d0de5d3254595966374fddf89f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 424d2726a1766ea438f6dadec5a757f8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: dfc87ae6910f9cf4a8c9629afcf7d9e2, type: 2}
