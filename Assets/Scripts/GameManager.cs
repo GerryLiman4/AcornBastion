@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     public void LoadLevel()
     {
         string levelScene = LevelScenePrefix + CampaignLevel;
-        SceneManager.LoadScene(Application.CanStreamedLevelBeLoaded(levelScene) ? levelScene : FallbackLevelScene);
+        SceneLoader.Load(Application.CanStreamedLevelBeLoaded(levelScene) ? levelScene : FallbackLevelScene);
     }
 
     public void StartCampaign()
@@ -56,6 +56,6 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneLoader.Load(0);
     }
 }

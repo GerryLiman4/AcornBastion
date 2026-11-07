@@ -95,7 +95,7 @@ public static class CampaignValidation
             {
                 "Assets/Scenes/MainMenu.unity", "Assets/Scenes/Level.unity", "Assets/Scenes/Level 1.unity",
                 "Assets/Scenes/Level 2.unity", "Assets/Scenes/Level 3.unity", "Assets/Scenes/Level 4.unity",
-                "Assets/Scenes/Level 5.unity",
+                "Assets/Scenes/Level 5.unity", "Assets/Scenes/Loading.unity",
             },
             locationPathName = "Temp/CampaignValidation/Player/FUR.exe",
             target = BuildTarget.StandaloneWindows64,
