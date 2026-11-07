@@ -34,7 +34,8 @@ public sealed class CampaignHUD : MonoBehaviour
 
     private void Refresh()
     {
-        if (owner == null) return;
+        // Enemies can still resolve while the scene unloads, after the panel is destroyed.
+        if (owner == null || outcome == null) return;
         bool finished = owner.currentState == GameStateId.Finish;
         outcome.SetActive(finished);
         if (!finished) return;
