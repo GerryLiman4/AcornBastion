@@ -116,6 +116,7 @@ public class LevelManager : MonoBehaviour
                 mineController.SpawnMinerals(Round.nodes, Definition.manaNodes);
                 deployUI.SetActive(true);
                 Notice = currentRound == 1 ? Definition.lesson : $"Round {currentRound - 1} clear! +{Config.clearBonus} gold. Prepare your defenses.";
+                ShowStateNotification("Deploy Phase");
                 break;
             case GameStateId.Wave:
                 SpawnedCount = 0;
@@ -123,6 +124,7 @@ public class LevelManager : MonoBehaviour
                 foreach (TowerController tower in towers) if (tower != null) tower.BeginWave();
                 Notice = currentRound == maxRound ? "FINAL WAVE!" : "Defend the base! Marked Grunts grant 2 mana.";
                 waveSpawnCoroutine = StartCoroutine(DoRoundWave());
+                ShowStateNotification("Wave Phase");
                 break;
             case GameStateId.Finish:
                 if (isGameOver) Notice = "The base has fallen. Retry this level with a fresh budget.";
@@ -138,9 +140,20 @@ public class LevelManager : MonoBehaviour
                     SwitchState(GameStateId.Deploy);
                     return;
                 }
+                ShowStateNotification("Finish");
                 break;
         }
         RefreshHud();
+    }
+
+    private Coroutine notificationRoutine;
+
+    // Plays the phase banner without holding up the state flow; a new banner replaces one still showing.
+    private void ShowStateNotification(string text)
+    {
+        if (notificationUI == null) return;
+        if (notificationRoutine != null) StopCoroutine(notificationRoutine);
+        notificationRoutine = StartCoroutine(notificationUI.ShowNotification(text));
     }
 
     public void OnStateExited()
