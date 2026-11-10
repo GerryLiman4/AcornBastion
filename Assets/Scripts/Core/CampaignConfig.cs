@@ -82,6 +82,8 @@ public sealed class CampaignLevel
     public int startingGold;
     public int minerLimit;
     public int manaNodes;
+    // Multiplies every enemy speed on this level; 0 or missing means 1.
+    public float enemySpeed;
     public CampaignRound[] rounds;
 }
 

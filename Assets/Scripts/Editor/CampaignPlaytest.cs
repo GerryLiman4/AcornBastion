@@ -47,6 +47,8 @@ public static class CampaignPlaytest
         try
         {
             if (EditorApplication.timeSinceStartup - started > 300) { Stop(false, "Timed out"); return; }
+            // Scene changes go through the Loading scene; the old level is still around until the load finishes.
+            if (SceneLoader.IsLoading) return;
             LevelManager level = UnityEngine.Object.FindFirstObjectByType<LevelManager>();
             if (level == null || level.Spells == null) return;
             if (level.isGameOver) { Stop(false, $"Base lost on L{level.LevelNumber} R{level.currentRound}"); return; }

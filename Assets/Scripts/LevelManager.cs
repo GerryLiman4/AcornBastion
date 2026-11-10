@@ -296,7 +296,8 @@ public class LevelManager : MonoBehaviour
             yield return new WaitForSeconds(Round.interval + (firstIntroduction ? 3f : 0f));
             CreepController enemy = Instantiate(enemyPrefabs[spawn.Id], spawnRoot.transform.position, Quaternion.identity);
             enemy.path = enemyPath;
-            enemy.Configure(spawn.Id, Config.Enemy(spawn.Id), LevelNumber, spawn.Marked);
+            enemy.Configure(spawn.Id, Config.Enemy(spawn.Id), LevelNumber, spawn.Marked,
+                Definition.enemySpeed > 0f ? Definition.enemySpeed : 1f);
             enemy.Resolved += OnEnemyResolved;
             creepControllerList.Add(enemy);
             SpawnedCount++;
@@ -304,7 +305,7 @@ public class LevelManager : MonoBehaviour
             if (firstIntroduction)
             {
                 SetNotice(spawn.Id == UnitId.ShadowGrunt ? "Grunt: the basic invader. Blue diamonds mark mana carriers."
-                    : spawn.Id == UnitId.ShadowBrute ? "Brute: high health, 2 base damage. Use Knights at bends!"
+                    : spawn.Id == UnitId.ShadowBrute ? "Brute: high health, 3 base damage. Use Knights at bends!"
                     : "Elder: heals nearby allies. Break the group with Area Burst!");
                 yield return new WaitForSeconds(3f);
             }

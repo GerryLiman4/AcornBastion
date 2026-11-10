@@ -32,12 +32,12 @@ public class CreepController : MonoBehaviour
     public bool IsResolved { get; private set; }
     public event Action<CreepController, EnemyResolution> Resolved;
 
-    public void Configure(UnitId id, EnemyDefinition definition, int level, bool marked)
+    public void Configure(UnitId id, EnemyDefinition definition, int level, bool marked, float speedMultiplier = 1f)
     {
         Id = id;
         Bounty = definition.bounty;
         damage = definition.baseDamage;
-        moveSpeed = definition.speed;
+        moveSpeed = definition.speed * speedMultiplier;
         hpController.maxHp = definition.health[Mathf.Clamp(level - 1, 0, definition.health.Length - 1)];
         IsMarked = marked;
         if (marked) Instantiate(manaIndicatorPrefab, transform.position + Vector3.up * 1.1f, Quaternion.identity, transform);
